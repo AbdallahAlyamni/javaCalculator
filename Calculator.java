@@ -1,4 +1,9 @@
+/*
+*project name : Basic java GUI Calculator.
+*/
+
 import java.util.Scanner;
+
 public class Calculator{
 	public static void main(String args[]){
 
@@ -7,19 +12,20 @@ public class Calculator{
 	int secondNumber;
 	int theerdNumber;
 
-	System.out.println("Write first numbre");
+	System.out.println("Write first number");
 	firstNumber = Integer.parseInt(input.nextLine());
 
-	System.out.println("Write second numbre");
+	System.out.println("Write second number");
 	secondNumber = Integer.parseInt(input.nextLine());
 
-	System.out.println("Write theerd numbre");
+	System.out.println("Write theerd number");
 	theerdNumber = Integer.parseInt(input.nextLine());
 
 	Addition(firstNumber,secondNumber,theerdNumber);
 	Substratction(firstNumber,secondNumber,theerdNumber);
 	Multiplication(firstNumber,secondNumber,theerdNumber);
     division(firstNumber,secondNumber,theerdNumber);
+    isqrt(firstNumber,secondNumber,theerdNumber);
 	}//End main function
 
 
@@ -50,6 +56,17 @@ public class Calculator{
         } catch(ArithmeticException ae) {
             System.err.println(ae.getMessage());
         }
+    }
+    
+    /* 
+    *Sqrt method add by @phantom-sage 
+    *isqrt: i==improved, sqrt==square root for numbers
+    */
+    public static void isqrt(int first_number, int second_number, int third_number) {
+        int result = (int) (Math.sqrt(first_number + second_number + third_number));
+        String msg = "Isqrt = ";
+        String out = msg + result;
+        System.out.println(out);
     }
     
     
